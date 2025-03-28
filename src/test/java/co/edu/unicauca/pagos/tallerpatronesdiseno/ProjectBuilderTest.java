@@ -5,10 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
- * Pruebas unitarias para el patrón Builder de Proyectos Académicos
  * @author Jhonatan
  */
 public class ProjectBuilderTest {
@@ -21,11 +19,9 @@ public class ProjectBuilderTest {
     
     @Test
     public void testSoftwareProjectBuilder() {
-        // Arrange
         ProjectBuilder softwareBuilder = new SoftwareProjectBuilder();
         director.setBuilder(softwareBuilder);
         
-        // Act
         Project softwareProject = director.buildProject(
             "Software Management System", 
             "SoftwareCorp", 
@@ -46,11 +42,9 @@ public class ProjectBuilderTest {
     
     @Test
     public void testDataScienceProjectBuilder() {
-        // Arrange
         ProjectBuilder dataScienceBuilder = new DataScienceProjectBuilder();
         director.setBuilder(dataScienceBuilder);
         
-        // Act
         Project dataScienceProject = director.buildProject(
             "AI Data Analysis", 
             "DataCorp", 
@@ -71,11 +65,9 @@ public class ProjectBuilderTest {
     
     @Test
     public void testEmbeddedSystemsProjectBuilder() {
-        // Arrange
         ProjectBuilder embeddedBuilder = new EmbeddedSystemsProjectBuilder();
         director.setBuilder(embeddedBuilder);
         
-        // Act
         Project embeddedProject = director.buildProject(
             "IoT Smart Home", 
             "IoTCorp", 
@@ -96,10 +88,8 @@ public class ProjectBuilderTest {
     
     @Test
     public void testProjectDirectorWithNullBuilder() {
-        // Arrange
         ProjectDirector directorWithNullBuilder = new ProjectDirector();
         
-        // Act & Assert
         assertThrows(NullPointerException.class, () -> {
             directorWithNullBuilder.buildProject(
                 "Test Project", 
@@ -114,11 +104,9 @@ public class ProjectBuilderTest {
     
     @Test
     public void testProjectBuilderWithEmptyLists() {
-        // Arrange
         ProjectBuilder softwareBuilder = new SoftwareProjectBuilder();
         director.setBuilder(softwareBuilder);
         
-        // Act
         Project emptyProject = director.buildProject(
             "Empty Project", 
             "Empty Company", 
@@ -137,11 +125,9 @@ public class ProjectBuilderTest {
     
     @Test
     public void testProjectBuilderWithMaximumValues() {
-        // Arrange
         ProjectBuilder embeddedBuilder = new EmbeddedSystemsProjectBuilder();
         director.setBuilder(embeddedBuilder);
 
-        // Act
         Project maxProject = director.buildProject(
             "Maximum Complexity Project", 
             "MaxCorp", 
