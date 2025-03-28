@@ -17,41 +17,41 @@ public class TallerPatronesDiseno {
    ProjectDirector director = new ProjectDirector();
 
         // Crear un proyecto de Software
-        SoftwareProjectBuilder softwareBuilder = new SoftwareProjectBuilder();
+        ProjectBuilder softwareBuilder = new SoftwareProjectBuilder();
         director.setBuilder(softwareBuilder);
         Project softwareProject = director.buildProject(
-                "Software Management System",
-                "SoftwareCorp",
-                Arrays.asList("User Authentication", "Database Management"),
-                Arrays.asList("Java", "Spring Boot", "MySQL"),
+                "Sistema de Gestión de Inventarios",
+                "TechCorp",
+                List.of("Gestión de productos", "Manejo de stock", "Generación de reportes"),
+                List.of("Java", "Spring Boot", "PostgreSQL"),
                 4,
-                "High"
+                "Alta"
         );
         System.out.println(softwareProject);
 
         // Crear un proyecto de Ciencia de Datos
-        DataScienceProjectBuilder dataScienceBuilder = new DataScienceProjectBuilder();
+        ProjectBuilder dataScienceBuilder = new DataScienceProjectBuilder();
         director.setBuilder(dataScienceBuilder);
         Project dataScienceProject = director.buildProject(
-                "AI Data Analysis",
+                "Análisis Predictivo de Ventas",
                 "DataCorp",
-                Arrays.asList("Machine Learning", "Big Data Processing"),
-                Arrays.asList("Python", "TensorFlow", "Spark"),
+                List.of("Análisis de tendencias", "Predicción de demanda", "Optimización de inventarios"),
+                List.of("Python", "Pandas", "TensorFlow"),
                 3,
-                "Medium"
+                "Mediana"
         );
         System.out.println(dataScienceProject);
 
         // Crear un proyecto de Sistemas Embebidos
-        EmbeddedSystemsProjectBuilder embeddedBuilder = new EmbeddedSystemsProjectBuilder();
+        ProjectBuilder embeddedBuilder = new EmbeddedSystemsProjectBuilder();
         director.setBuilder(embeddedBuilder);
         Project embeddedProject = director.buildProject(
-                "IoT Smart Home",
-                "IoTCorp",
-                Arrays.asList("Microcontrollers", "Wireless Communication"),
-                Arrays.asList("C", "Arduino", "ESP32"),
-                2,
-                "Low"
+                "Sistema de Monitoreo de Temperatura",
+                "IoT Solutions",
+                List.of("Sensor de temperatura", "Comunicación Bluetooth", "Interfaz Web"),
+                List.of("C", "Arduino", "ESP32"),
+                5,
+                "Alta"
         );
         System.out.println(embeddedProject);
     }
