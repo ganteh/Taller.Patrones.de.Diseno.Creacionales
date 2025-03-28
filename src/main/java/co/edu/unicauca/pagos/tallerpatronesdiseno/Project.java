@@ -32,8 +32,8 @@ public class Project {
         return "Project{" +
                 "name='" + name + '\'' +
                 ", company='" + company + '\'' +
-                ", requirements=" + requirements +
-                ", technologies=" + technologies +
+                ", requirements=" + requirements + " (" + requirements.size() + " requirements)" +
+                ", technologies=" + technologies + " (" + technologies.size() + " technologies)" +
                 ", numStudents=" + numStudents +
                 ", difficulty='" + difficulty + '\'' +
                 '}';
